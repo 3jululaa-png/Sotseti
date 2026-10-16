@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Верификация на лица в соц. сетях</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .image-box {
+            width: 100%;
+            height: 320px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #fafafa;
+            margin-bottom: 20px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Сетка для крестовины управления */
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: #007bb5;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn.active {
+            background-color: #005f83;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Расположение элементов по сетке (крестовина) */
+        #btn-up { grid-column: 2; grid-row: 1; }
+        #btn-left { grid-column: 1; grid-row: 2; }
+        #btn-zero { grid-column: 2; grid-row: 2; }
+        #btn-right { grid-column: 3; grid-row: 2; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Верификация в социальных сетях с фото</h2>
+
+    <!-- Область отображения -->
+    <div class="image-box">
+        <img id="main-preview" src="" alt="Выбранное изображение">
+    </div>
+
+    <!-- Кнопки управления -->
+    <div class="controls-grid">
+        <button class="btn" id="btn-up" onclick="showImage(4)">^</button>
+        <button class="btn" id="btn-left" onclick="showImage(3)">&lt;</button>
+        <button class="btn" id="btn-zero" onclick="showImage(1)">0</button>
+        <button class="btn" id="btn-right" onclick="showImage(2)">&gt;</button>
+    </div>
+</div>
+
+<script>
+    // Пути к картинкам
+    // 1 -> 0 (001.jpg)
+    // 2 -> > (Left.jpg)
+    // 3 -> < (Right.jpg)
+    // 4 -> ^ (Up.jpg)
+    const images = {
+        1: '001.jpg',
+        2: 'Left.jpg',
+        3: 'Right.jpg',
+        4: 'Up.jpg'
+    };
+
+    const mainPreview = document.getElementById('main-preview');
+
+    // Функция отображения фото при нажатии на кнопку
+    function showImage(index) {
+        // Убираем активный класс со всех кнопок
+        ['up', 'left', 'zero', 'right'].forEach(id => {
+            document.getElementById(`btn-${id}`).classList.remove('active');
+        });
+
+        // Добавляем активный класс нужной кнопке
+        const mapId = { 1: 'zero', 2: 'right', 3: 'left', 4: 'up' };
+        document.getElementById(`btn-${mapId[index]}`).classList.add('active');
+
+        // Меняем картинку
+        mainPreview.src = images[index];
+    }
+
+    // При загрузке страницы показываем картинку по умолчанию (для '0')
+    window.onload = function() {
+        showImage(1);
+    };
+</script>
+
+</body>
+</html>
