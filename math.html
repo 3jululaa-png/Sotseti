@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cititon CT-2098L</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#c9b99a;--bg2:#b5a481}
+:root[data-theme="light"]{--bg:#c9b99a;--bg2:#b5a481}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#3a342a;--bg2:#2a251d}}
+:root[data-theme="dark"]{--bg:#3a342a;--bg2:#2a251d}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:14px;background:radial-gradient(circle at 30% 20%,var(--bg),var(--bg2));font-family:Arial,Helvetica,sans-serif}
+.calc{width:100%;max-width:400px;border-radius:10px 10px 14px 14px;background:#111;box-shadow:0 18px 40px rgba(0,0,0,.45),0 2px 0 #444 inset;overflow:hidden}
+.top{padding:12px 14px 14px;color:#ddd;position:relative}
+.brand{display:flex;justify-content:space-between;align-items:flex-start}
+.logo{font:italic bold 26px Georgia,serif;letter-spacing:1px;color:#e6e6e6;line-height:1}
+.logo small{display:block;font:9px Arial;letter-spacing:.5px;margin-top:2px}
+.model{font-size:15px;letter-spacing:1px;margin-top:6px}
+.tk{font-size:10px;letter-spacing:1px;margin-top:6px;color:#ccc;border-top:2px dotted #888;padding-top:3px}
+.solar{background:#6b6b6b;border:2px solid #555;border-radius:3px;padding:6px 12px;font:italic bold 17px Georgia,serif;color:#cfcfcf;height:34px;margin-top:4px}
+.dg{font:bold 22px Arial;text-align:center;line-height:1;color:#eee}
+.dg small{display:block;font-size:8px;border:1px solid #888;border-radius:3px;margin-top:2px;color:#bbb}
+.lcdwrap{margin-top:10px;background:linear-gradient(#c9c9c9,#8f8f8f);border-radius:4px;padding:6px;border:2px solid #777}
+.lcd{background:linear-gradient(#a9b1a4,#98a094);border-radius:2px;height:62px;padding:4px 10px;position:relative;box-shadow:inset 0 2px 6px rgba(0,0,0,.4);overflow:hidden}
+.ind{font:bold 10px Arial;color:#2b2f2a;display:flex;gap:10px;height:12px}
+.ind span{opacity:0}.ind span.on{opacity:.9}
+.val{position:absolute;right:10px;bottom:2px;font:44px/1 "Share Tech Mono",ui-monospace,Menlo,Consolas,monospace;color:#1d211c;letter-spacing:1px;white-space:nowrap}
+.lcd.off .val,.lcd.off .ind{visibility:hidden}
+.body{background:linear-gradient(135deg,#d9dadb,#b9babc 55%,#cfd0d2);padding:8px 12px 16px;border-top:3px solid #ddd;position:relative}
+.title{text-align:center;font:bold 12px Arial;letter-spacing:1px;color:#222;margin:2px 0 8px;text-decoration:underline dotted}
+.row1{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;align-items:center;margin-bottom:12px}
+.sl{grid-column:span 2;position:relative;padding-top:12px}
+.sl .lb{display:flex;justify-content:space-between;font:9px Arial;color:#222;padding:0 4px;position:absolute;top:-2px;left:0;right:0}
+.track{height:26px;border-radius:13px;background:#d3d3d3;box-shadow:inset 0 2px 5px #555;position:relative;touch-action:none;cursor:pointer}
+.knob{position:absolute;top:2px;width:22px;height:22px;border-radius:5px;background:linear-gradient(#444,#111);box-shadow:0 2px 3px #000;transition:left .12s}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(5,52px);gap:10px 8px}
+.k{border:0;padding:3px;border-radius:9px;background:linear-gradient(#555,#222);box-shadow:0 2px 3px rgba(0,0,0,.5);cursor:pointer;min-width:0}
+.k i{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:6px;font:bold 22px Arial;font-style:normal;color:#f2f2f2;background:linear-gradient(#4a4a4a,#2a2a2a);box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+.k:active{transform:translateY(2px);box-shadow:none}
+.k.f i{background:linear-gradient(#f4f4f4,#cfcfcf);color:#333;font-size:18px}
+.k.f.big i{font-size:26px}
+.k.r i{background:linear-gradient(#d24a50,#a3252c);color:#fff;font-size:20px}
+.k.t{padding:3px}.k.t i{background:linear-gradient(#4fc0b8,#2a8c85);color:#fff;font-size:24px}
+.k.n i{font-size:30px;font-weight:400}
+.plus{grid-column:5;grid-row:4 / span 2}
+.plus i{font-size:34px}
+.foot{height:10px;background:#111}
+</style>
+</head>
+<body>
+<div class="calc">
+  <div class="top">
+    <div class="brand">
+      <div><div class="logo">Cititon<small>ЭЛЕКТРОННЫЙ</small></div><div class="tk">TRANSPARENT KEY</div></div>
+      <div class="model">CT-2098L</div>
+      <div class="solar">Cayina</div>
+      <div class="dg">12<small>DIGITS</small></div>
+    </div>
+    <div class="lcdwrap"><div class="lcd" id="lcd"><div class="ind"><span id="iM">M</span><span id="iG">GT</span><span id="iN">-</span><span id="iE">E</span></div><div class="val" id="val">0</div></div></div>
+  </div>
+  <div class="body">
+    <div class="title">ELECTRONIC CALCULATOR</div>
+    <div class="row1">
+      <div class="sl" data-s="round"><div class="lb"><span>UP</span><span>5/4</span><span>CUT</span></div><div class="track"><div class="knob"></div></div></div>
+      <div class="sl" data-s="dec" style="grid-column:span 2"><div class="lb"><span>F</span><span>4</span><span>2</span><span>0</span><span>ADD2</span></div><div class="track"><div class="knob"></div></div></div>
+      <button class="k t" data-k="neg"><i>+/−</i></button>
+      <button class="k t" data-k="bs"><i>→</i></button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+  <div class="foot"></div>
+</div>
+<script>
+const keys=[
+['MU','f','MU'],['MC','f','MC'],['MR','f','MR'],['M−','f','M-'],['M+','f','M+'],['GT','f','GT'],
+['OFF','f','OFF'],['7','n','7'],['8','n','8'],['9','n','9'],['%','f big','%'],['√','f big','sq'],
+['EX','f','EX'],['4','n','4'],['5','n','5'],['6','n','6'],['×','f big','*'],['÷','f big','/'],
+['CE','r','CE'],['1','n','1'],['2','n','2'],['3','n','3'],['+','f big plus','+'],['−','f big','-'],
+['AC','r','AC'],['0','n','0'],['00','n','00'],['•','n','.'],['=','f big','=']
+];
+const g=document.getElementById('grid');
+keys.forEach(([t,c,k])=>{const b=document.createElement('button');b.className='k '+c;b.dataset.k=k;b.innerHTML='<i>'+t+'</i>';
+ if(k==='='){b.style.gridColumn='6';b.style.gridRow='5'}
+ g.appendChild(b)});
+const sym={'+':'+','-':'−','*':'×','/':'÷'};
+let S,opts={round:1,dec:0};
+const ROUND=['UP','5/4','CUT'],DEC=[null,4,2,0,2];
+function reset(full){S={cur:'0',acc:null,op:null,fresh:true,mem:full?0:(S?S.mem:0),gt:full?0:(S?S.gt:0),on:true,err:false}}
+reset(true);
+function rnd(x,d){if(d==null)return x;const m=10**d,v=Math.abs(x)*m,s=Math.sign(x);let r;
+ const mode=opts.round;r=mode===0?Math.ceil(v-1e-9):mode===1?Math.round(v+1e-9):Math.floor(v+1e-9);return s*r/m}
+function fmt(x){
+ if(!isFinite(x)){S.err=true;return '0'}
+ const d=DEC[opts.dec];let r=rnd(x,d),s;
+ s=d!=null?r.toFixed(d):String(parseFloat(r.toPrecision(12)));
+ if(/e/i.test(s)){S.err=true;return '0'}
+ if(s.replace(/[-.]/g,'').length>12){
+  const ip=s.replace('-','').split('.')[0];
+  if(ip.length>12){S.err=true;return '0'}
+  s=String(parseFloat(r.toPrecision(12)));if(/e/i.test(s)){S.err=true;return '0'}
+ }
+ return s}
+const P=()=>parseFloat(S.cur)||0;
+function show(){
+ const l=document.getElementById('lcd');l.classList.toggle('off',!S.on);
+ document.getElementById('val').textContent=S.cur;
+ iM.className=S.mem?'on':'';iG.className=S.gtOn?'on':'';iN.className=P()<0?'on':'';iE.className=S.err?'on':'';
+}
+function calc(a,o,b){
+ if(o==='+')return a+b;if(o==='-')return a-b;if(o==='*')return a*b;
+ if(b===0){S.err=true;return 0}return a/b}
+function setRes(x){S.cur=fmt(x);S.fresh=true}
+function press(k){
+ if(k==='AC'){const m=S.mem,gt=S.gt;reset(false);S.mem=m;S.gt=gt;S.gtOn=false;show();return}
+ if(k==='OFF'){S.on=false;show();return}
+ if(!S.on){return}
+ if(S.err&&k!=='AC'&&k!=='CE')return;
+ if(/^[0-9]$|^00$|^\.$/.test(k)){
+  S.gtOn=false;
+  if(S.fresh){S.cur='0';S.fresh=false}
+  if(k==='.'){if(!S.cur.includes('.'))S.cur+='.'}
+  else{
+   if(S.cur.replace(/[-.]/g,'').length+k.length>12)return;
+   S.cur=(S.cur==='0')?(k==='00'?'0':k):S.cur+k;
+  }
+ }else if(['+','-','*','/'].includes(k)){
+  if(S.op&&!S.fresh&&S.acc!=null){const r=calc(S.acc,S.op,P());S.acc=r;setRes(r)}
+  else S.acc=P();
+  S.op=k;S.fresh=true;
+ }else if(k==='='){
+  if(S.op&&S.acc!=null){const r=calc(S.acc,S.op,P());S.gt+=r;S.acc=null;S.op=null;setRes(r)}
+  else S.fresh=true;
+ }else if(k==='%'){
+  const x=P();
+  if(S.op&&S.acc!=null){const a=S.acc;let r=S.op==='*'?a*x/100:S.op==='/'?(x?a/x*100:(S.err=true,0)):S.op==='+'?a*(1+x/100):a*(1-x/100);
+   S.acc=null;S.op=null;S.gt+=r;setRes(r)}else setRes(x/100);
+ }else if(k==='sq'){const x=P();if(x<0){S.err=true}else setRes(Math.sqrt(x))}
+ else if(k==='neg'){if(S.cur!=='0')S.cur=S.cur[0]==='-'?S.cur.slice(1):'-'+S.cur}
+ else if(k==='bs'){if(!S.fresh){S.cur=S.cur.length>1?S.cur.slice(0,-1):'0';if(S.cur==='-')S.cur='0'}}
+ else if(k==='CE'){if(S.err){S.err=false}S.cur='0';S.fresh=true}
+ else if(k==='M+'){S.mem+=P();S.fresh=true}
+ else if(k==='M-'){S.mem-=P();S.fresh=true}
+ else if(k==='MR'){setRes(S.mem)}
+ else if(k==='MC'){S.mem=0}
+ else if(k==='GT'){S.gtOn=true;setRes(S.gt)}
+ else if(k==='EX'){if(S.acc!=null){const t=P();S.cur=fmt(S.acc);S.acc=t;S.fresh=true}}
+ else if(k==='MU'){if(S.op&&S.acc!=null){const x=P();if(x>=100){S.err=true}else{const r=S.acc/(1-x/100);S.acc=null;S.op=null;setRes(r)}}}
+ show();
+}
+g.addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b)press(b.dataset.k)});
+document.querySelector('.row1').addEventListener('click',e=>{const b=e.target.closest('.k');if(b)press(b.dataset.k)});
+document.addEventListener('keydown',e=>{
+ const m={'Enter':'=','=':'=',',':'.','.':'.','+':'+','-':'-','*':'*','/':'/','Backspace':'bs','Escape':'AC','Delete':'CE','%':'%'};
+ let k=/^[0-9]$/.test(e.key)?e.key:m[e.key];if(k){e.preventDefault();press(k)}});
+document.querySelectorAll('.sl').forEach(sl=>{
+ const t=sl.querySelector('.track'),kn=sl.querySelector('.knob'),key=sl.dataset.s,n=key==='round'?3:5;
+ const place=()=>{kn.style.left=(opts[key]/(n-1))*(t.clientWidth-26)+2+'px'};
+ const set=ev=>{const r=t.getBoundingClientRect();let f=(ev.clientX-r.left)/r.width;opts[key]=Math.max(0,Math.min(n-1,Math.round(f*(n-1))));place();
+  if(!S.err&&S.on&&S.fresh&&S.cur!=='0')S.cur=fmt(P());show()};
+ let down=false;t.addEventListener('pointerdown',e=>{down=true;set(e)});
+ window.addEventListener('pointermove',e=>{if(down)set(e)});window.addEventListener('pointerup',()=>down=false);
+ opts.round=1;opts.dec=0;place();addEventListener('resize',place);
+});
+show();
+</script>
+</body>
+</html>
