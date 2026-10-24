@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КАРТИНКА</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #error-msg {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #image-container {
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box" id="auth-box">
+        <h2>Введите пароль</h2>
+        <input type="password" id="password-input" placeholder="Пароль...">
+        <button onclick="checkPassword()">Войти</button>
+        <div id="error-msg">Неверный пароль</div>
+    </div>
+
+    <div id="image-container">
+        <img src="https://3jululaa-png.github.io/Sotseti/ska0.jpg" alt="Секретное фото">
+    </div>
+
+    <script>
+        const correctPassword = "si6X7sEvNe";
+
+        function checkPassword() {
+            const inputVal = document.getElementById('password-input').value;
+            const errorMsg = document.getElementById('error-msg');
+            const authBox = document.getElementById('auth-box');
+            const imageContainer = document.getElementById('image-container');
+
+            if (inputVal === correctPassword) {
+                authBox.style.display = 'none'; // Скрываем форму ввода
+                imageContainer.style.display = 'block'; // Показываем картинку
+            } else {
+                errorMsg.style.display = 'block'; // Показываем ошибку
+            }
+        }
+
+        // Поддержка нажатия клавиши Enter
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+
+</body>
+</html>
